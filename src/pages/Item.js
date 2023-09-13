@@ -18,10 +18,13 @@ const Item = ({ food }) => {
 
         // 마커가 표시될 위치입니다 
         var markerPosition = new kakao.maps.LatLng(gage.LAT, gage.LNG);
-
+        var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+        var imageSize = new kakao.maps.Size(24, 35);
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
         // 마커를 생성합니다
         var marker = new kakao.maps.Marker({
-            position: markerPosition
+            position: markerPosition,
+            image: markerImage
         });
 
         // 마커가 지도 위에 표시되도록 설정합니다
