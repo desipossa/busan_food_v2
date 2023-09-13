@@ -7,6 +7,7 @@ import AllList from "./pages/AllList";
 import GuList from "./pages/GuList";
 
 import './css/style.scss';
+import Item from "./pages/Item";
 
 
 const App = () => {
@@ -35,16 +36,12 @@ const App = () => {
                 console.log(food)
 
             }
-            {
-                console.log(food)
-            }
-            {/* {
-                food.map(it => <li>{it.MAIN_TITLE}</li>)
-            } */}
+
 
             <Routes>
                 <Route path="/" element={<AllList food={food} />}></Route>
                 <Route path="/:gu" element={<GuList food={food} />}></Route>
+                <Route path="/item/:item" element={<Item food={food} />}></Route>
             </Routes>
             <Footer />
         </>
