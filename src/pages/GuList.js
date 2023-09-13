@@ -7,10 +7,6 @@ const GuList = ({ food }) => {
     console.log(guList);
 
 
-
-    // useEffect(() => {
-    //     food.length > 0 && KakaoMapScript();
-    // }, [gu, food])
     const { kakao } = window;
 
     const KakaoMapScript = () => {
@@ -27,7 +23,6 @@ const GuList = ({ food }) => {
             return {
                 title: it.TITLE,
                 latlng: new kakao.maps.LatLng(it.LAT, it.LNG),
-                //image: it.MAIN_IMG_THUMB
             }
         });
 
